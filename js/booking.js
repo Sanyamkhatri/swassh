@@ -202,8 +202,8 @@ document.getElementById("bookingForm").addEventListener("submit", function (e) {
 
     Email.send({
       Host: "smtp.elasticemail.com",
-      Username: "info@swassh.com",
-      Password: "C06A4D05C0482E104B7CBE675524346DCA4B",
+      Username: "email",
+      Password: "fillyourpasswordhere",
       To: "info@swassh.com",
       From: "info@swassh.com",
       Subject: "This is the subject",
