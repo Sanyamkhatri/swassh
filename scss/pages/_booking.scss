@@ -1,0 +1,58 @@
+// Booking Form
+.form-check-label{
+	&:before{
+		width: 20px;
+		height: 20px;
+		background-color: transparent;
+		border: 2px solid var(--primary);
+		top: 2px;
+	}
+	&:after{
+		width: 20px;
+		height: 20px;
+		top: 2px;
+	}
+}
+.custom-checkbox{
+	.form-check-input:checked ~ .form-check-label::before{
+		background-color: var(--primary);
+	}
+	.form-check-label{
+		&::before,
+		&::after{
+			left: -30px;
+		}
+	}
+	label {
+		line-height: 24px;
+		margin-bottom: 0;
+	}
+}
+.booking-form{
+	.dropdown-toggle,
+	.form-control{
+		border: 1px solid #cacaca;
+		padding: 15px 20px;
+		border-radius: 0;
+		height: 50px;
+	}
+	textarea.form-control{
+		height:220px;
+	}
+	.form-title{
+		background-color: $primary;
+		color: #fff;
+		padding: 12px 20px;
+		margin-bottom: 20px;
+		font-weight: 500;
+		display: block;
+	}
+	.form-group{
+		margin-bottom: 30px;
+	}
+	@include respond('phone'){
+		.form-group{
+			margin-bottom: 20px;
+		}
+	}
+}

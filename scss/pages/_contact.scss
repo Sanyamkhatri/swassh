@@ -1,0 +1,114 @@
+// Contact Form
+.contact-form{
+	label {
+		font-size: 15px;
+		font-weight: 400;
+		color: #606060;
+		position: absolute;
+		top: 10px;
+		left: 20px;
+		transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-o-transition: all 0.5s;
+	}
+	
+	.input-group .form-control {
+		border-width: 0 0 1px 0;
+		background-color: rgba(0,0,0,0);
+		background: transparent;
+		border: 1px solid rgba(0,0,0,0.2);
+		height: 50px;
+		padding: 8px 20px;
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.form-control{
+		&:hover,
+		&:active,
+		&:focus{
+			border-color: $primary;
+		}
+	}
+	.input-group textarea.form-control {
+		height: 150px;
+		padding: 15px 20px;
+	}
+	.form-group {
+		margin-bottom: 30px;
+		&.focused{
+			label{
+				margin-top: -31px;
+				font-size: 11px;
+				margin-left: -20px;
+			}
+		}
+		@include respond('phone'){
+			margin-bottom: 20px;
+		}
+	}
+	
+	&.style1{
+		background-color: var(--primary);
+		padding: 50px 50px;
+		box-shadow: 0 10px 40px -20px var(--primary);
+		border: 2px solid var(--primary);
+		background-image: url(../images/background/bg3.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		@include respond('tab-land'){
+			padding: 30px;
+		}
+		@include respond('phone'){
+			padding: 25px;			
+		}
+		.input-group .form-control {
+			background: #fff;
+			border: 1px solid rgba(0,0,0,0.0);
+		}
+	}
+}
+.contact-ri{
+	padding-left: 30px;
+	@include respond('tab-port'){
+		padding-left: 0;		
+	}
+}
+iframe {
+    border: 0;
+}
+.icon-box {
+    max-width: 300px;
+    margin-bottom: 30px;
+	
+	.title{
+		margin-bottom: 20px;
+		border-bottom: 2px solid rgba(0,0,0,0.1);
+		padding-bottom: 15px;
+		display: flex;
+		align-items: center;
+		text-transform: uppercase;
+		
+		i {
+			font-size: 32px;
+			margin-right: 15px;
+			color: $primary;
+		}
+	}
+}
+@include respond('phone'){
+	#rc-imageselect, 
+	.g-recaptcha {
+        transform-origin:0 0;
+        -moz-transform-origin:0 0;
+        -o-transform-origin:0 0;
+        -webkit-transform-origin:0 0;
+		transform:scale(0.80);
+        -moz-transform:scale(0.80);
+        -o-transform:scale(0.80);
+        -webkit-transform:scale(0.80);
+        margin-bottom: -15px;
+    }
+}

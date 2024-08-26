@@ -1,0 +1,116 @@
+// TESTIMONIALS
+.testimonial-area:after{
+	content:"";
+	background-image:url(../images/background/bg-map.png);
+	background-position:center;
+	position:absolute;
+	width:40%;
+	height:100%;
+	z-index:0;
+	right:0;
+	top:0;
+	background-color:$white;
+	
+	@include respond('tab-port'){
+		display: none;
+	}
+}
+.testimonial-bx{
+	.testimonial-content{
+		margin-bottom: 0;
+		background: $primary;
+		padding:30px 30px 70px 30px;
+		position: relative;
+		box-shadow:0 0 30px 0 rgba($primary, 0.2);
+		p{
+			color: $white;
+			margin-bottom: 0;
+			font-weight: 300;
+			font-style: italic;
+			font-family:$font-family-title;
+			font-size:20px;
+		}
+		&:before,
+		&:after{
+			content:"";
+			opacity:0.1;
+			position: absolute;
+			width:164px;
+			height:135px;
+		}
+		&:before{
+			background-image:url(../images/quote.png);
+			top: 0;
+			left: 0;
+		}
+		&:after{
+			background-image:url(../images/quote2.png);
+			bottom: 0;
+			right: 0;
+		}
+	}
+	.client-info{
+		padding: 0 30px;
+		margin-top: -45px;
+		position: relative;
+		z-index: 1;
+	}
+	.testimonial-thumb{
+		height: 85px;
+		width: 85px;
+		border-radius: 50px;
+		overflow: hidden;
+		border: 3px solid $white;
+		margin-bottom:0;
+	}
+	.name{
+		font-size: 22px;
+		color: $white;
+		font-style: italic;
+		font-weight: 400;
+		margin-bottom: 0;
+		float: right;
+	}
+	@include respond('phone-land'){
+		.testimonial-content {
+			padding: 20px 20px 60px 20px;
+			p {
+				font-size: 18px;
+			}
+		}
+	}
+}
+.testimonial-area{
+	.dots-style-1{
+		.owl-dots{
+			position: absolute;
+			right: -60px;
+			top: 50%;
+			transform: translateX(-50%);
+			margin-top: -60px;
+			.owl-dot{
+				display: block;
+				margin: 10px 0;
+			}
+			@include respond('laptop'){
+				position: unset;
+				transform: unset;
+				display: flex;
+				text-align: center;
+				justify-content: center;
+				margin-top: 20px;
+				.owl-dot{
+					margin: 20px 0 0;
+					span {
+						border-color: #fff;
+					}
+				}		
+			}
+			@include respond('phone'){
+				.owl-dot{
+					margin: 10px 0 0;
+				}		
+			}
+		}
+	}
+}

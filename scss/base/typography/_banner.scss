@@ -1,0 +1,98 @@
+// site button 
+.page-banner{
+	background:$secondary;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+	background-size:cover;
+	position: relative;
+    overflow: hidden;
+	@include respond('tab-port'){
+		height: 350px;
+	}
+	.container{
+		display: table;
+		height: 100%;
+		
+	}
+	.page-banner-entry{
+	    height: 400px;
+		vertical-align: middle;
+		display: table-cell;
+		padding-top: 80px;
+		@include respond('tab-port'){
+			height: 350px;
+		}		
+		@include respond('phone-land'){
+			padding-top: 60px;	
+			text-align:center;
+			.breadcrumb-row{
+				display:inline-block;
+			}
+		}	
+	}
+	h1 {
+		font-weight: 600;
+		font-size: 65px;
+		margin-bottom: 5px;
+		color: #ffff;
+		text-transform: uppercase;
+		span{
+			display:inline-block;
+			&:before,
+			&:after {
+				content: "//";
+				color: $primary;
+				font-weight: 900;
+				transform: scale(0.98) translateY(-3%);
+				display: inline-block;
+			}
+			&:after {
+				
+				margin-left: 20px;
+			}
+			&:before {
+				margin-right: 20px;
+			}
+		}
+		@include respond('tab-port'){
+			font-size: 35px;
+		}
+		@include respond('phone'){
+			span{
+				&:before,
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}
+.breadcrumb-row{
+	font-family:$font-family-title;
+	ul {
+		background:transparent;
+		padding: 0;
+		margin: 0;
+		justify-content: center;
+			
+		li {
+			padding: 0;
+			margin-right: 3px;
+			display: inline-block;
+			font-size: 18px;
+			font-weight: 400;
+			color:$white;
+			&.active{
+				color:$white;
+			}
+			i{
+				margin-right: 10px;
+				font-size: 20px;
+			}
+			a{
+				color:$primary;
+			}
+		}
+	}
+}

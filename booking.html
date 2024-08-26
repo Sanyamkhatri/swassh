@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- META ============================================= -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<!-- OG -->
+	<meta name="robots" content="index, follow">
+	
+	<meta name="keywords" content="Car Cleaning, Car Washing, Polishing, Rubbing, Windshield Polishing, Glass Rubbing, Shampoo Washing, Dusting"/>
+	<meta name="author" content="Swassh" />
+	<meta name="description" content="Swashh provides professional car cleaning services at your doorstep whenever you want, so you can spend your time doing the things you love." />
+	
+	<meta property="og:url" content="https://swassh.com/" />
+	<meta property="og:site_name" content="Swassh : DoorStep car Cleaning Services  "/>
+	<meta property="og:type" content="https://swassh.com/" />
+	<meta property="og:locale" content="en_us" />
+	<meta property="og:title" content="Swassh : DoorStep car Cleaning Services " />
+	<meta property="og:description" content="Swassh : DoorStep car Cleaning Services" />
+	<meta property="og:image" content="https://swassh.com/"/>
+	
+	<meta name="format-detection" content="telephone=no">
+	
+	<!-- FAVICONS ICON ============================================= -->
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+	
+	<!-- PAGE TITLE HERE ============================================= -->
+	<title>Swassh : Doorstep Car Cleaning Services </title>
+	
+	<!-- MOBILE SPECIFIC ============================================= -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<scrip src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+	
+	<!-- All PLUGINS CSS ============================================= -->
+	<link rel="stylesheet" href="vendor/bootstrap-select/bootstrap-select.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+</head>
+<body>
+	<!-- Header -->
+	<header class="header_terms" id="header">
+        <img src="images/logoSS.png" alt="Logo">
+        <nav class="nav-links_terms">
+            <a href="./index.html">HOME</a>
+            <div class="dropdown_terms">
+                <a href="#" class="dropdown-heading_terms">PACKAGES</a>
+                <ul class="dropdown-menu_terms">
+                    <li><a href="./QuickShine.html">Quick Shine</a></li>
+                    <li><a href="./deepCleaning.html">Deep Cleaning</a></li>
+                    <li><a href="./rubbingPolishing.html">Rubbing & Polishing</a></li>
+                    <li><a href="./windshield.html">WindShield Polish</a></li>
+                </ul>
+            </div>
+            <a href="./booking.html">CONTACT US</a>
+        </nav>
+        <a href="./booking.html" class="booking-btn_terms">BOOKING</a>
+    
+        <div class="hamburger_terms" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    
+    <div class="mobile-menu_terms" id="mobile-menu">
+        <a href="./index.html">HOME</a>
+        <div class="mobile-dropdown_terms">
+            <a href="./index.html" class="dropdown-heading_terms">PACKAGES</a>
+            <ul class="dropdown-menu_terms">
+                <li><a href="./QuickShine.html">Quick Shine</a></li>
+                    <li><a href="./deepCleaning.html">Deep Cleaning</a></li>
+                    <li><a href="./rubbingPolishing.html">Rubbing & Polishing</a></li>
+                    <li><a href="./windshield.html">WindShield Polish</a></li>
+            </ul>
+        </div>
+        <a href="./booking.html">BOOKING</a>
+    </div>
+    
+        
+	<!-- Header End -->
+     <div class="booking_div">
+
+<div class="form-container_booking">
+  <form id="bookingForm">
+      <h1 class="h1_booking">Booking Form</h1>
+      
+      <div class="input-group_booking">
+          <div class="input-field_booking">
+              <label for="name">Name</label>
+              <input class="input_booking_text" type="text" id="name" name="name" placeholder="Enter your name" required>
+              <span class="error-message" id="nameError">Name is required.</span>
+          </div>
+          <div class="input-field_booking">
+              <label for="phone">Phone No.</label>
+              <input class="input_booking_text" type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}">
+              <span class="error-message" id="phoneError">Phone number is required.</span>
+              <span class="error-message1" id="phoneError">Phone number must be Exactly 10 Digits.</span>
+          </div>
+      </div>
+
+      <div class="input-field_booking">
+          <label for="city">City</label>
+          <select class="input_booking_text" id="city" name="city" required>
+              <option value="" disabled selected>Select your city</option>
+              <option value="Jaipur">Jaipur</option>
+              <option value="Kota">Kota</option>
+              <option value="Indore">Indore</option>
+          </select>
+          <span class="error-message" id="cityError">City is required.</span>
+      </div>
+
+      <div class="input-field_booking">
+          <label for="address">Address</label>
+          <textarea class="input_booking_text textarea" id="address" name="address" placeholder="Enter your address" required></textarea>
+          <span class="error-message" id="addressError">Address is required.</span>
+      </div>
+      
+      <div class="input-field_booking">
+          <label for="bookingDate">Booking Date</label>
+          <input class="input_booking_text" type="date" id="bookingDate" name="bookingDate" required>
+          <span class="error-message" id="bookingDateError">Booking date is required.</span>
+      </div>
+      
+      <fieldset>
+          <label class="label_legend">Available Time Slot</label>
+          <div class="form-group_checkbox">
+              <label class="checkbox-container_checkbox">
+                  <input type="checkbox" name="time" value="9am-11am"> 9am - 11am
+              </label>
+              <label class="checkbox-container_checkbox">
+                  <input type="checkbox" name="time" value="11am-1pm"> 11am - 1pm
+              </label>
+              <label class="checkbox-container_checkbox">
+                  <input type="checkbox" name="time" value="1pm-3pm"> 1pm - 3pm
+              </label>
+              <label class="checkbox-container_checkbox">
+                  <input type="checkbox" name="time" value="3pm-5pm"> 3pm - 5pm
+              </label>
+          </div>
+          <span class="error-message" id="timeError">Please select at least one time slot.</span>
+      </fieldset>
+
+      <fieldset>
+          <legend class="label_legend">Choose Package</legend>
+          <div class="checkbox-group_booking">
+              <label>
+                  <input class="input_booking_text" type="checkbox" name="package" value="quickshine">
+                  <img src="images/favicons/quick-shine.png" alt="Quick Shine">
+                  <p>Quick Shine</p>
+              </label>
+              <label>
+                  <input class="input_booking_text" type="checkbox" name="package" value="deepCleaning">
+                  <img src="images/favicons/deep.png" alt="Deep Cleaning">
+                  <p>Deep Cleaning</p>
+              </label>
+              <label>
+                  <input class="input_booking_text" type="checkbox" name="package" value="rubbingPolishing">
+                  <img src="images/favicons/rubbing.png" alt="Rubbing & Polishing">
+                  <p>Rubbing & Polishing</p>
+              </label>
+              <label>
+                  <input class="input_booking_text" type="checkbox" name="package" value="windshieldPolish">
+                  <img src="images/favicons/windshield.png" alt="WindShield Polishing">
+                  <p>WindShield Polishing</p>
+              </label>
+          </div>
+          <span class="error-message" id="packageError">Please select at least one package.</span>
+      </fieldset>
+
+      <fieldset>
+          <legend class="label_legend">Select Car Type</legend>
+          <div class="checkbox-group_booking">
+              <label>
+                  <input class="input_booking_text" type="checkbox" name="carType" value="hatchback">
+                  <img src="./images/pricing/pricing/hatchback.jpg" alt="Hatchback">
+                  <p>Hatchback</p>
+              </label>
+              <label>
+                  <input class="input_booking_text" type="checkbox" name="carType" value="sedan">
+                  <img src="./images/pricing/pricing/sedan.jpg" alt="Sedan">
+                  <p>Sedan</p>
+              </label>
+              <label>
+                  <input class="input_booking_text" type="checkbox" name="carType" value="compact-suv">
+                  <img src="./images/pricing/pricing/compact-suv.jpg" alt="Compact SUV">
+                  <p>Compact SUV</p>
+              </label>
+              <label>
+                  <input class="input_booking_text" type="checkbox" name="carType" value="SUV-5-seater">
+                  <img src="./images/pricing/pricing/suv-5-seater.jpg" alt="SUV 5 Seater">
+                  <p>SUV 5 Seater</p>
+              </label>
+              <label>
+                  <input class="input_booking_text" type="checkbox" name="carType" value="SUV-7-seater">
+                  <img src="./images/pricing/pricing/suv-7-seater.jpg" alt="SUV 7 Seater">
+                  <p>SUV 7 Seater</p>
+              </label>
+          </div>
+          <span class="error-message" id="carTypeError">Please select at least one car type.</span>
+      </fieldset>
+
+      <div class="input-field_booking custom_margin-price_booking">
+          <label for="price">Price</label>
+          <input class="input_booking_text" type="text" id="price_display" placeholder="Price" disabled>
+      </div>
+
+      <div class="terms_booking">
+          <label>
+              <input type="checkbox" id="agree" name="agree" required>
+              I Agree to the <a href="./termsconditions.html" target="_blank">Terms and Conditions as set out by the user agreement.</a>
+          </label>
+          <span class="error-message" id="agreeError">Required Field</span>
+      </div>
+
+      <div class="terms_booking">
+          <label>
+              <input type="checkbox" id="agree2" name="agree2" required>
+              Water & Electricity Available 
+          </label>
+          <span class="error-message" id="agree2Error">Required Field</span>
+      </div>
+      
+      <button class="button_booking" type="submit">Submit</button>
+  </form>
+</div>
+
+</div>
+<div id="thankYouModal" class="modal">
+  <div class="modal-content">
+    <span class="close">OK</span>
+    <p>Thank you for choosing Swassh. We will get back to you soon!</p>
+  </div>
+</div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <footer class="footer">
+       
+	<footer class="footer">
+       
+        <div class="footer-top bt0">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-3 col-md-6">
+                <div class="widget footer_widget">
+                  <h6 class="footer-title">COMPANY</h6>
+                  <p class="mb-20 custom__p">
+                    Need a special car cleaning service? we are happy to fulfil every
+                    request in order to exceed your expectations
+                  </p>
+                  <div class="ft-content">
+                    <i class="fa fa-phone"></i>
+                    <span>Talk To Our Support</span>
+                    <h4>9982210776</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6">
+                <div class="widget custom_widget-footer">
+                  <h5 class="footer-title">Our Solutions</h5>
+                  <ul>
+                    <li><a href="./deepCleaning.html">Deep Cleaning</a>
+                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="./deepCleaning.html" class="space_custom-footer">BOOKING</a></li> 
+					
+                    <li><a href="./QuickShine.html">Rubbing&Polishing</a></li>
+                    
+                    <li><a href="./rubbingPolishing.html">Quick Shine</a></li>
+                  
+                    <li><a href="./windshield.html">Windshield Polish </a></li> 
+                               
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6">
+              
+              </div>
+              <div class="col-xl-3 col-md-6">
+                <div class="widget widget_info">
+                  <h5 class="footer-title">Subscribe Now</h5>
+                  <p class="mb-20">
+                    Subscribe to our newsletter and be the first to know about exclusive deals, new services, and car care tips.
+
+                  </p>
+                  <form
+                    class="subscribe-form subscription-form mb-30"
+                    action="script/mailchamp.php"
+                    method="post"
+                  >
+                    <div class="ajax-message"></div>
+                    <div class="input-group">
+                      <input
+                        name="email"
+                        required="required"
+                        class="form-control"
+                        placeholder="Email Address"
+                        type="email"
+                      />
+                      <div class="input-group-append">
+                        <button
+                          name="submit"
+                          value="Submit"
+                          type="submit"
+                          class="btn w-100 btn-primary radius-sm"
+                        >
+                          Send
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                  <ul class="list-inline ft-social-bx">
+                    <li>
+                      <a href="https://www.instagram.com/swassh_jaipur?igsh=cW00NGI3NXdrM3hu;" class="btn button-sm"
+                        ><i class="fa fa-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/swassh_indore?igsh=N3FwajFxNm1xNHIw;" class="btn button-sm"
+                        ><i class="fa fa-instagram"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div
+                class="col-lg-6 col-md-6 col-sm-12 text-center text-md-start"
+              >
+                <p class="mb-0">© Copyright Swassh. All right reserved.</p>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 text-center text-md-end">
+                <ul class="widget-link">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="./booking.html">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="whatsapp">
+        <a href="https://wa.me/9982210776" class="whatsapp-float" target="_blank">
+          <img src="images/whatsapp.png" alt="WhatsApp">
+          <span>Contact Us</span>
+      </a>
+  
+      </div>
+    <!-- Footer END ==== -->
+	<button class="back-to-top fa fa-chevron-up"></button>
+</div>
+<!-- External JavaScripts -->
+<script>
+    window.onscroll = function() {
+      var header = document.getElementById("header");
+      if (window.pageYOffset > 50) {
+          header.classList.add("scrolled");
+      } else {
+          header.classList.remove("scrolled");
+      }
+  };
+  
+  // Toggle mobile menu
+  var hamburger = document.getElementById("hamburger");
+  var mobileMenu = document.getElementById("mobile-menu");
+  
+  hamburger.onclick = function() {
+      if (mobileMenu.style.display === "flex") {
+          mobileMenu.style.display = "none";
+      } else {
+          mobileMenu.style.display = "flex";
+      }
+  };
+  
+  
+  </script>
+  <script src="./js/booking.js"></script>
+</body>
+</html>

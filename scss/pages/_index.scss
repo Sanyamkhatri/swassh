@@ -1,0 +1,149 @@
+.bg-gray-alt{
+	background-color: #fafafa;
+}
+
+// About Us
+.about-media{
+	position:relative;
+	
+	.media{
+		padding: 0 0 70px 80px;
+		img{
+			width:100%;
+		}
+	}
+	.about-contact{
+		width: 360px;
+		padding: 35px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		box-shadow:0 10px 50px -20px $primary;
+		-webkit-animation: up-down 2s infinite  alternate;
+		animation:up-down  2s infinite  alternate;
+		
+	}
+	@include respond('phone-land'){
+		.media{
+			padding: 0 0 30px;
+		}
+		.about-contact{
+			width: 100%;
+			position: unset;
+			padding: 30px;
+		}
+	}
+}
+//mover-animation up-down
+@-webkit-keyframes up-down {
+    0% { transform: translatey(0); }
+    100% { transform: translatey(-10px); }
+}
+@keyframes up-down {
+    0% { transform: translatey(0); }
+    100% { transform: translatey(-10px); }
+}
+
+
+.choose-media {
+    width: 650px;
+    float: right;
+    height: 100%;
+	-webkit-animation: up-down 2s infinite alternate;
+    animation: up-down 2s infinite alternate;
+	@include respond('tab-land'){
+		width:100%;
+	}
+	img{
+		width: 100%;
+		transform: scale(1.1);
+		margin-left: -40px;
+		@include respond('tab-land'){
+			margin-left: 0;			
+			transform: scale(1);
+		}
+	}
+}
+
+// Progress
+.progress-box{
+	&.style1{
+		margin-bottom: 40px;
+		.progress-bar{
+			transition:unset;
+		}
+		.progress{
+			height: 5px;
+			background-color: lighten($primary, 35);
+			overflow: inherit;
+			border-radius: 0;
+		}
+		.progress-info {
+			display: flex;
+			justify-content: space-between;
+			.title{
+				text-transform: uppercase;
+				margin-bottom: 5px;
+			}
+			.progress-value{
+				margin-bottom: 5px;
+			}
+		}
+		@include respond('phone'){
+			margin-bottom: 30px;
+		}
+	}
+}
+
+// Form Card 
+.form-card{
+	padding: 50px 0;
+	.form-group{
+		margin-bottom: 10px;
+		
+		.form-control{
+			background-color: #f8f8f8;
+			height: 45px;
+			font-size: 14px;
+			border: 0;	
+			padding: 10px 25px;
+			border-radius: 0;
+		}
+		.btn{
+			height: 45px;
+		}
+	}
+	@include respond('phone'){
+		padding: 40px 0;
+	}
+}
+
+// member details
+.member-detail{
+	.title{
+		margin-bottom: 10px;
+	}
+	.team-box{
+		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+		padding: 5px;
+		background-color: #fff;
+	}
+	.team-media{
+		img{
+			width: 100%;
+		}
+	}
+	.team-info{
+		padding: 20px;
+	}
+}
+
+// job-career
+.job-career-box {
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.1);
+	@include respond('phone'){
+		padding: 25px;		
+	}
+}

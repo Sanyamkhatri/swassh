@@ -1,0 +1,103 @@
+// feature-bx1
+.feature-bx1{
+	padding: 40px 30px;
+    border-radius: 0;
+    background-color: #fff;
+    @include durationMedium;
+    z-index: 1;
+	.ttr-tilte,
+	p{
+		margin-bottom: 15px;
+	}
+	.ttr-tilte,
+	a,
+	i,
+	p{
+		@include durationMedium;
+	}
+	&:hover{
+		background:darken($primary, 5);
+		color:$white;
+		
+		.ttr-tilte,
+		i,
+		a,
+		p{
+			color:$white;
+		}
+		
+		[fill]{
+			fill: $white;
+		}
+		.btn-link:after{
+			background:$white;
+		}
+	}
+	.icon-lg {
+		line-height: 1;
+		margin-bottom: 24px;
+	}
+	@include respond('phone'){
+		padding: 35px 30px;
+	}
+}
+
+// feature-bx2
+.feature-bx2{
+	border: 1px solid #b4b4b4;
+	padding: 35px 25px;
+    border-radius: 0;
+    z-index: 1;
+    @include durationMedium;
+    .icon-lg {
+		line-height: 1;
+		margin-bottom: 24px;
+	}
+	.ttr-tilte,
+	p{
+		margin-bottom: 15px;
+	}
+	.ttr-tilte,
+	a,
+	p{
+		@include durationMedium;
+	}
+	
+	&:after{
+		content: "";
+		border-top: 15px solid var(--primary);
+		border-left: 15px solid transparent;
+		position: absolute;
+		right: 5px;
+		top: 5px;
+	}
+	&[class*="bg-"]{
+		border: 0;
+		p,
+		.ttr-tilte,
+		a,
+		i{
+			color: #fff;
+		}
+		&:after{
+			border-top-color: #fff;
+		}
+		.btn-link:after{
+			background-color: #fff;
+		}
+	}
+	&.bg-warning{
+		p,
+		.ttr-tilte,
+		a,
+		i{
+			color: #000;
+		}
+		&:after{
+			border-top-color: #000;
+		}
+		.btn-link:after{
+			background-color: #000;
+		}
+	}
+}

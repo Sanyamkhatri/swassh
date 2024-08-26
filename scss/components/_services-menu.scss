@@ -1,0 +1,97 @@
+.service-menu{
+	margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #f42222;
+    padding: 30px;
+    box-shadow: 0 8px 60px -25px #f42222;
+	li{
+		a{
+			display: block;
+			padding: 15px 50px 15px 20px;
+			text-transform: capitalize;
+			font-weight: 600;
+			position: relative;
+			z-index: 1;
+			transition: all 0.5s;
+			-moz-transition: all 0.5s;
+			-webkit-transition: all 0.5s;
+			-ms-transition: all 0.5s;
+			-o-transition: all 0.5s;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+			color: #fff;
+			font-weight: 500;
+			font-size: 16px;
+		}
+		&:last-child a{
+			border-bottom:0;
+		}
+		a{ 
+			i{
+				color: #fff;
+				font-size: 18px;
+				line-height: 16px;
+				text-align: center;
+				border-radius: 35px;
+				position: absolute;
+				right: 20px;
+				top: 20px;
+				padding-left: 2px;
+			}
+		}
+		&.active,
+		&:hover{
+			a{
+				background-color: #fff;
+				color: #000;
+				i{
+					color: #000;
+				}
+			}
+		}
+	}
+	&.style-1{
+		li a i {
+			font-size: 24px;
+		}
+	}
+	@include respond('tab-land'){
+		padding: 15px;
+	}
+}
+.left-border-1{
+	padding-left: 30px;
+    border-left: 1px solid rgba(0,0,0,0.1);
+}
+.contact-infolist{
+	margin: 0 0 40px;
+    padding: 25px 0 5px;
+    list-style: none;
+    border-top: 1px solid rgba(0,0,0,.1);
+    border-bottom: 1px solid rgba(0,0,0,.1);
+	li {
+		position: relative;
+		padding: 0 20px 20px 80px;
+		img {
+			position: absolute;
+			left: 0;
+			top: 10px;
+			width: 60px;
+		}
+		.contact-title {
+			color: #020d26;
+			font-size: 20px;
+			line-height: 28px;
+			font-weight: 600;
+			margin-bottom: 2px;
+		}
+		a, 
+		p {
+			font-size: 16px;
+			line-height: 24px;
+			color: #555;
+			font-weight: 400;
+			margin-bottom: 5px;
+		}
+	}
+}

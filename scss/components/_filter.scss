@@ -1,0 +1,131 @@
+// FILTER BUTTONS CSS
+.feature-filters {
+    margin-bottom: 50px;
+	ul {
+		margin: 0;
+		list-style: none;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	li {
+		display: inline-block;
+		padding: 0;
+		margin-bottom:3px;
+		color:#000;
+		font-weight: 500;
+		position: relative;
+		border-radius:0;
+		background:transparent;
+		overflow:hidden;
+		
+		&.btn {
+			box-shadow: none;
+			-webkit-box-shadow: none;
+			outline: none !important;
+		}
+		input {
+			display: none;
+		}
+		a {
+			margin: 0 5px 5px 0;
+			font-size: 16px;
+			position: relative;
+			text-transform: uppercase;
+			display: block;
+		}
+		&.active{
+			[class*="btn"] {
+				color: #fff;
+				background-color: #EFBB20;
+			}
+		}
+	}
+	&.center{
+		text-align: center;
+		ul {
+			display: inline-block;
+			margin: auto;
+		}
+		[class*="btn"] {
+			display: inline-block;
+			margin: 0 5px 10px;
+			text-transform: uppercase;
+			@include respond('phone'){
+				margin: 0 1px 5px;
+				padding: 5px 10px;
+				font-size: 12px;
+			}
+		}
+	}
+	@include respond('phone'){
+		margin-bottom:30px;
+		li{
+			a{
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+// Filter 1
+.filter-style1{
+	ul{
+		li{
+			margin: 0 5px 10px;
+			a{
+				color: #000;
+				margin: 0;
+				padding: 10px 20px;
+				border: 1px solid;
+				border-color: #000;
+			}
+			&:hover{
+				background:transparent;
+			}
+			&.active{
+				a{
+					background-color: var(--primary);
+					border-color: var(--primary);
+					color: #fff;
+				}
+			}
+			@include respond('phone'){
+				margin: 0 3px 6px;
+				a{
+					padding: 8px 14px;
+				}
+			}
+		}
+	}
+}
+
+// Filter 2
+.filter-style2{
+	ul{
+		li{
+			margin: 0 15px 5px;
+			a{
+				display: block;
+				border-bottom: 3px solid;
+				border-color: transparent;
+				margin: 0;
+				font-size: 18px;
+				font-weight: 600;
+			}
+			&.active{
+				a{
+					border-color: var(--primary);
+				}
+			}
+			@include respond('phone'){
+				margin: 0 10px 10px;
+				a{
+					font-size: 14px;
+					border-bottom: 2px solid transparent;
+				}
+			}
+		}
+	}
+}

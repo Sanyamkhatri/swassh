@@ -1,0 +1,199 @@
+// PRICING TABLE
+.pricingtable-inner {
+    text-align: center;
+}
+.pricingtable-price {
+    padding: 20px 20px;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+}
+.pricingtable-bx {
+    color: #282a3c;
+    font-family: montserrat;
+    font-size: 45px;
+    font-weight: 500;
+}
+.pricingtable-type {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+	:before {
+		content: "/";
+		margin-right: 3px;
+	}
+}
+.pricingtable-title {
+    background-color: #fff;
+    padding: 20px;
+    text-transform: uppercase;
+	* {
+		margin: 0;
+		color: #fff;
+		font-weight: 800;
+	}
+}
+.pricingtable-features {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #E9E9E9;
+	li {
+		padding: 12px;
+		border-bottom: 1px solid #E9E9E9;
+		i{
+			margin: 0 3px;
+		}
+		&:nth-child(even) {
+			background-color: #fff;
+		}
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	
+}
+.pricingtable-footer {
+    margin-top: -1px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+}
+.pricingtable-highlight {
+    margin: -20px 0;
+    -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 99;
+	
+	.pricingtable-price {
+		padding: 30px 20px;
+	}
+	.pricingtable-footer {
+		padding: 30px 20px;
+	}
+}
+.no-col-gap .pricingtable-wrapper {
+    margin-left: -1px;
+}
+
+// pricingtable-row
+.pricingtable-wrapper{
+	&.style1{
+		border: 2px solid;
+		border-color: $border-color;
+		position: relative;
+		@include transitionMedium;
+		.pricingtable-main{
+			.pricingtable-price {
+				border: 0;
+				padding: 20px 30px 0;
+				.priceing-doller{
+					color: $dark;
+					font-weight: 600;
+					font-size: 18px;
+				}
+				.pricingtable-bx{
+					font-size: 30px;
+					color: $primary;
+					font-family: roboto;
+					font-weight: 800;
+				}
+			}
+			.pricingtable-title{
+				padding: 0 30px 20px;
+				text-transform: uppercase;
+				border-bottom: 1px solid $border-color;
+				h4{
+					color: $black;
+					text-transform: capitalize;
+					font-size: 24px;
+				}
+				p{
+					color: lighten($black,50);
+					font-weight: 500;
+					text-transform: capitalize;
+					display: flex;
+					font-size: 14px;
+					align-items: center;
+					margin-top: 10px;
+					i{
+						color: $black;
+						font-size: 16px;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+		.pricingtable-inner {
+			text-align: left;
+			.pricingtable-features{
+				border: 0;
+				padding: 20px 10px 0;
+				li {
+					border: 0;
+					color: $black;
+					font-weight: 500;
+					font-size: 14px;
+					padding: 8px 20px;
+					i {
+						margin: 0 8px 0 0;
+						background-color: lighten($primary,40);
+						border-radius: 10px;
+						height: 20px;
+						color: $primary;
+						width: 20px;
+						font-size: 10px;
+						text-align: center;
+						line-height: 20px;
+					}
+				}
+			}
+			.pricingtable-footer {
+				border: 0;
+				padding: 25px 30px;
+			}
+		}
+		&.pricingtable-highlight {
+			&:after{
+				content: "\f00c";
+				font-family: fontawesome;
+				position: absolute;
+				right: 0;
+				bottom: -1px;
+				color: $white;
+				font-size: 12px;
+				@include transitionMedium;
+			}
+			&:before{
+				content: "";
+				border-left: 25px solid transparent;
+				border-top: 25px solid transparent;
+				border-bottom: 25px solid $primary;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				@include transitionMedium;
+			}
+			.pricingtable-tag{
+				background: $primary;
+				color: $white;
+				font-size: 12px;
+				text-transform: uppercase;
+				line-height: 12px;
+				padding: 10px 50px;
+				text-align: center;
+				position: absolute;
+				right: -50px;
+				transform: rotate(45deg);
+				top: 20px;
+			}
+		}
+		&:hover,
+		&.pricingtable-highlight {
+			margin: 0;
+			box-shadow: unset;
+			border-color: $primary;
+			overflow: hidden;
+		}
+	}
+}

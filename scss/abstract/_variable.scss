@@ -1,0 +1,74 @@
+
+// Colors
+$primary   : #f42222;
+$secondary : #171a1e !default;
+$success   : #10d876 !default;
+$info      : #2754e6 !default;
+$warning   : #ffdb3d !default;
+$danger    : #E50202 !default;
+$light     : #f7f7f7 !default;
+$dark      : #262F5A;
+
+
+// Theme Base Color
+$ft-color: #878e9c;
+
+
+// Body Colors
+$body-bg   : #ffffff;
+$body-color: #777777;
+$text-muted : #AEAED5;
+$colors     : () !default;
+
+// Font Family
+$font-family-base : 'poppins', sans-serif;
+$font-family-title : 'Roboto Condensed', sans-serif;
+
+// Font Size And Weight
+$h1-font-size           : 2.25rem;
+$h2-font-size           : 1.875rem;
+$h3-font-size           : 1.5rem;
+$h4-font-size           : 1.125rem;
+$h5-font-size           : 1rem;
+$h6-font-size           : 0.875rem;
+$headings-font-weight   : 500;
+$font-size-base         : 1rem !default;
+$font-weight-base       : 400 !default;
+$heading-primary-size: 1.8rem;
+$sub-heading-size    : 1.6rem !default;
+$grid-gutter-width   : 30px;
+$dropdown-lik-color  : $body-color;
+$border-color        : #E1E1F0;
+$headings-color      :#020d26 !default;
+$grid-breakpoints    : (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440);
+$container-max-widths: (sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1199px) !default;
+
+$input-btn-focus-width: 0rem !default;
+$border-radius-base   : 4px !default;
+$shadow-color: rgba(160, 159, 202, 0.15);
+$box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+
+// CSS variable
+:root {
+	--primary: #{$primary};
+	--secondary: #{$secondary};
+	--primary-hover: #{darken($primary, 10)};
+	--primary-dark: #{darken($primary, 30)};
+	--primary-light-1: #{rgba($primary, 0.1)};
+	--primary-light-2: #{rgba($primary, 0.2)};
+	--primary-light-3: #{rgba($primary, 0.3)};
+	--primary-light-4: #{rgba($primary, 0.4)};
+	--primary-light-5: #{rgba($primary, 0.5)};
+	--primary-light-6: #{rgba($primary, 0.6)};
+	--primary-light-7: #{rgba($primary, 0.7)};
+	--primary-light-8: #{rgba($primary, 0.8)};
+	--primary-light-9: #{rgba($primary, 0.9)};
+	--font-family-base: #{$font-family-base};
+	--font-family-title: #{$font-family-title};
+	--headings-color: #{$headings-color};
+}
+
+

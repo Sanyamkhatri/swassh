@@ -1,0 +1,51 @@
+// Accordion
+.ttr-accordion{
+	&.style1{
+		.card{
+			margin-bottom: 10px;
+			box-shadow: unset;
+		}
+		.card-header{
+			padding: 12px 25px;
+			border: 1px solid $primary;
+			background:$primary;
+			text-align: left;
+			display: block;
+			color: $white;
+			font-size: 20px;
+			border-radius: 0;
+			font-family:$font-family-title;
+			@include durationMedium;
+			cursor:pointer;
+			
+			i{
+				margin-right: 5px;
+				color:$white;
+			}
+			&.collapsed{
+				border-color: #999;
+				background-color: $white;
+				color: $dark;
+				i{
+					color:$primary;
+				}
+			}			
+		}
+		.card-body {
+			background-color: $light;
+			padding: 20px 25px;
+			color: $black;
+			border-radius:0;
+			font-size:15px;
+		}
+		@include respond('phone'){
+			.card-header {
+				padding: 12px 18px;
+				font-size: 18px;
+			}
+			.card-body {
+				padding: 15px 18px;
+			}
+		}
+	}
+}

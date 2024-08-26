@@ -1,0 +1,46 @@
+/* error */
+.error-404{
+	height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+	max-width: 550px;
+	margin: auto;
+		
+	.inner-content{
+		text-align: center;
+	}
+	.error-title{
+		font-size: 180px;
+		line-height: 180px;
+		margin-bottom: 15px;
+		
+		span {
+			width: 145px;
+			height: 145px;
+			display: inline-block;
+			background-image: url(../images/error.gif);
+			background-size: 100%;
+			margin: 0 10px;
+		}
+	}
+	.error-text{
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+	p{
+		margin-bottom: 30px;
+	}
+	@include respond('phone'){
+		.error-title{
+			font-size: 120px;
+			line-height: 120px;
+			
+			span {
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
+}

@@ -1,0 +1,60 @@
+.account-wraper{
+	height: 100vh;
+	display: flex;
+	@include respond('phone'){
+		height: 100%;
+		padding: 75px 25px;
+	}
+}
+.my-account{
+	max-width: 500px;
+    margin: auto;
+    background-color: #fff;
+    padding: 50px;
+    vertical-align: middle;
+    width: 500px;
+	
+	.logo{
+		width: 160px;
+		margin: 0 auto 40px;
+	}
+	.form-control{
+		border-width: 0 0 1px 0;
+		background-color: rgba(0, 0, 0, 0);
+		background: transparent;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		height: 50px;
+		padding: 8px 20px;
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.btn{
+		height: 50px;
+		padding: 14px 24px;
+	}
+	
+	.nav-tabs{
+		border: 0;
+		.nav-item{
+			.nav-link{
+				padding: 7px 20px;
+				display: inline-block;
+				border-radius: 0;
+				font-size: 16px;
+				font-weight: 400;
+				text-transform: uppercase;
+				border: 0;
+				background-color: #f9f9f9;
+				color: #000000;
+				
+				&.active{				
+					background-color: $primary;
+					color: #fff;
+				}
+			}
+		}
+	}
+	@include respond('phone'){
+		padding: 25px;
+	}
+}

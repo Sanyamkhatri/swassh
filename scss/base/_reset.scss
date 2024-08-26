@@ -1,0 +1,169 @@
+* {
+    outline: none;
+    padding: 0;
+
+    &::after {
+        margin : 0;
+        padding: 0;
+    }
+
+    &::before {
+        margin : 0;
+        padding: 0;
+    }
+}
+body {
+    line-height: 1.5;
+	color:$body-color;
+
+    &.fixed {
+        overflow: hidden;
+        position: fixed;
+    } 
+}
+h1, 
+.h1 {
+	font-size: 55px;
+	@include respond('tab-land'){
+		font-size: 52px;
+	}
+	@include respond('phone-land'){
+		font-size: 48px;
+	}
+	@include respond('phone'){
+		font-size: 48px;
+	}
+}
+h2, 
+.h2{
+	font-size: 45px;
+	@include respond('tab-land'){
+		font-size: 40px;		
+	}
+	@include respond('phone-land'){
+		font-size: 36px;		
+	}
+	@include respond('phone'){
+		font-size: 30px;
+	}
+}
+h3, 
+.h3{
+	font-size: 35px;
+	@include respond('phone-land'){
+		font-size: 32px;
+	}
+	@include respond('phone'){
+		font-size: 28px;
+	}
+}
+h4, 
+.h4{
+	font-size: 28px;
+	@include respond('phone'){
+		font-size: 24px;
+	}
+}
+h5, 
+.h5{
+	font-size: 24px;
+	@include respond('phone'){
+		font-size: 20px;
+	}
+}
+h6, 
+.h6{
+	font-size: 18px;
+	@include respond('phone'){
+		font-size: 16px;
+	}
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a, 
+h6 a{
+	color: #000;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+	font-family: $font-family-title;
+	font-weight:600;
+	color:#000;
+}
+ul {
+    padding: 0;
+    margin : 0;
+}
+img {
+    border-style: none;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+li {
+    list-style: none;
+}
+a {
+    // color       : $td;
+    text-decoration: none;
+    outline        : none;
+	color          : $primary;	
+
+    &:hover,
+    &:focus,
+    &.active {
+        text-decoration: none;
+        outline        : none;
+    }
+}
+b,
+strong,
+.strong {
+    font-weight: 500;
+    color      : $headings-color;
+}
+.h-0 {
+    height: 0;
+}
+#main-wrapper{
+    opacity     : 0;
+    transition  : all 0.25s ease-in;
+    overflow    : hidden;
+    position    : relative;
+    z-index     : 1;
+    margin-top  : 60px;
+
+    &.show{
+        opacity: 1;
+    }
+}
+.content-body{
+    margin-left: 65px;
+    margin-top: 18px;
+    margin-right: 6px;
+    margin-bottom: 45px;
+}
+.bg-gray{
+	background-color: #f9f9f9;
+}
+
+[class*="flaticon-"]{
+	font-family: 'Flaticon';
+}
+.media-cover{
+	object-fit:cover;
+	height:100%;
+	width:100%;
+	img{
+		object-fit:cover;
+		height:100%;
+		width:100%;
+	}
+}
+.ttr-media{
+	img{
+		min-width: 100%;
+	}
+}

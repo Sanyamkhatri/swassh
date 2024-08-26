@@ -1,0 +1,102 @@
+/* About Us 2 */
+.about-wraper2{
+	.about-content{
+		position:relative;
+	}
+	.ttr-media img {
+		min-width: auto;
+	}
+	.service-content{
+		background-color: #fff;
+		box-shadow: 0 0 15px 0 rgba(0,0,0,0.1);
+		border-radius: 50px;
+		line-height: 60px;
+		text-align: center;
+		font-weight: 500;
+		margin-bottom:100px;
+		width: 235px;
+		position: relative;
+		height: 60px;
+		align-items: center;
+		display: flex;
+		-webkit-animation: move 2s infinite  alternate;
+		animation: move 10s infinite  alternate;
+		
+		&:before{
+			content: "\f00c";
+			background-color: $primary;
+			height: 45px;
+			width: 45px;
+			line-height: 45px;
+			border-radius: 50%;
+			color:#fff;
+			font-family: 'FontAwesome';
+			display: block;
+			position: absolute;
+			top: 8px;
+			text-align: center;
+		}
+		.title{
+			margin:0;
+			text-transform: uppercase;
+		}
+	}
+	.content-left,
+	.content-right{
+		position: absolute;
+		transform: translate(-50%,-50%);
+		top: 60%;
+	}
+	.content-left{
+		left: 23%;
+		.service-content{
+			-webkit-animation: up-down 5s infinite  alternate;
+			animation: up-down 5s infinite  alternate;
+			padding: 0 65px 0 20px;
+			justify-content: flex-end;
+			&:nth-child(2){
+				margin:0 0 100px -50px;
+			}
+			&:before{
+				right: 8px;
+			}
+		}
+	}
+	.content-right{		
+		right: -50px;
+		.service-content{
+			padding: 0 20px 0 65px;
+			-webkit-animation: up-down2 5s infinite  alternate;
+			animation: up-down2 5s infinite  alternate;
+			&:nth-child(2){
+				margin:0 0 100px 50px;
+			}
+			&:before{
+				left: 8px;
+			}
+		}
+	}
+	@include respond('tab-land'){
+		.content-left{
+			left: 150px;
+		}
+		.content-right {
+			right: -150px;
+		}
+	}
+	@include respond('tab-port'){
+		.content-left,
+		.content-right {
+			display: none;
+		}
+	}
+}
+//mover-animation up-down
+@-webkit-keyframes up-down2 {
+    0% { transform: translatey(0); }
+    100% { transform: translatey(-10px); }
+}
+@keyframes up-down2 {
+    0% { transform: translatey(0); }
+    100% { transform: translatey(10px); }
+}
