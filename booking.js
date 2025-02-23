@@ -1,45 +1,15 @@
 
-function validateForm() {
+// import { configDotenv } from "dotenv";
+
+function validateCheckBoxes() {
   let isValid = true;
-
-  // Define the required fields
-  const requiredFields = [
-    { id: 'name', messageId: 'nameError' },
-    { id: 'phone', messageId: 'phoneError' },
-    { id: 'city', messageId: 'cityError' },
-    { id: 'address', messageId: 'addressError' },
-    { id: 'bookingDate', messageId: 'bookingDateError' },
-    { id: 'agree', messageId: 'agreeError' },
-    { id: 'agree2', messageId: 'agree2Error' }
-  ];
-
-  requiredFields.forEach(field => {
-    const inputElement = document.getElementById(field.id);
-    const errorElement = document.getElementById(field.messageId);
-
-    if (inputElement.type === 'checkbox') {
-      if (!inputElement.checked) {
-        errorElement.style.display = 'inline';
-        isValid = false;
-      } else {
-        errorElement.style.display = 'none';
-      }
-    } else {
-      if (!inputElement.value.trim()) {
-        inputElement.classList.add('input-error'); // Add error class
-        errorElement.style.display = 'inline';
-        isValid = false;
-      } else {
-        inputElement.classList.remove('input-error'); // Remove error class
-        errorElement.style.display = 'none';
-      }
-    }
-  });
 
   const checkboxGroups = [
     { name: 'time', errorMessageId: 'timeError' },
     { name: 'package', errorMessageId: 'packageError' },
-    { name: 'carType', errorMessageId: 'carTypeError' }
+    { name: 'carType', errorMessageId: 'carTypeError' },
+    { name: 'agree', errorMessageId: 'agreeError' },
+    { name: 'agree2', errorMessageId: 'agree2Error' }
   ];
 
   checkboxGroups.forEach(group => {
@@ -54,11 +24,8 @@ function validateForm() {
     }
   });
 
-return isValid;
+  return isValid;
 }
-
-
-
 
 const checkboxes = document.querySelectorAll('input[name="carType"]');
 checkboxes.forEach((checkbox) => {
@@ -104,131 +71,130 @@ const contact = document.getElementById("phone");
 const address = document.getElementById("address");
 const bookDate = document.getElementById("bookingDate");
 const city = document.getElementById("city")
+let price;
 let timeSlot;
 let package;
 let pricingField;
 let carType;
-let price;
+let calculatedprice;
+
+
 
 // Dynamic form data
 document.getElementById("bookingForm").addEventListener("change", function (e) {
+  console.log(e.target.value)
   e.preventDefault();
-
-  validateForm()
   package = document.querySelector('input[name="package"]:checked')?.value;
   pricingField = document.getElementById("price_display");
+  price = document.getElementById("price")
   carType = document.querySelector('input[name="carType"]:checked')?.value;
   timeSlot = document.querySelector('input[name="time"]:checked')?.value;
 
-  price = "";
-  console.log(package, carType, timeSlot);
+  calculatedprice = "";
+  // console.log(package, carType, timeSlot);
   if (package && carType) {
     if (package === "quickshine") {
       if (carType === "hatchback") {
-        price = "₹349";
+        calculatedprice = "₹349";
       } else if (carType === "sedan") {
-        price = "₹399";
+        calculatedprice = "₹399";
       } else if (carType === "compact-suv") {
-        price = "₹399";
+        calculatedprice = "₹399";
       } else if (carType === "SUV-5-seater") {
-        price = "₹449";
+        calculatedprice = "₹449";
       } else if (carType === "SUV-7-seater") {
-        price = "₹449";
+        calculatedprice = "₹449";
       }
     } else if (package === "deepCleaning") {
       if (carType === "hatchback") {
-        price = "₹799";
+        calculatedprice = "₹799";
       } else if (carType === "sedan") {
-        price = "₹999";
+        calculatedprice = "₹999";
       } else if (carType === "compact-suv") {
-        price = "₹999";
+        calculatedprice = "₹999";
       } else if (carType === "SUV-5-seater") {
-        price = "₹1199";
+        calculatedprice = "₹1199";
       } else if (carType === "SUV-7-seater") {
-        price = "₹1399";
+        calculatedprice = "₹1399";
       }
     } else if (package === "rubbingPolishing") {
       if (carType === "hatchback") {
-        price = "₹1399";
+        calculatedprice = "₹1399";
       } else if (carType === "sedan") {
-        price = "₹1599";
+        calculatedprice = "₹1599";
       } else if (carType === "compact-suv") {
-        price = "₹1599";
+        calculatedprice = "₹1599";
       } else if (carType === "SUV-5-seater") {
-        price = "₹1799";
+        calculatedprice = "₹1799";
       } else if (carType === "SUV-7-seater") {
-        price = "₹1799";
+        calculatedprice = "₹1799";
       }
     } else if (package === "windshieldPolish") {
       if (carType === "hatchback") {
-        price = "₹799";
+        calculatedprice = "₹799";
       } else if (carType === "sedan") {
-        price = "₹899";
+        calculatedprice = "₹899";
       } else if (carType === "compact-suv") {
-        price = "₹899";
+        calculatedprice = "₹899";
       } else if (carType === "SUV-5-seater") {
-        price = "₹999";
+        calculatedprice = "₹999";
       } else if (carType === "SUV-7-seater") {
-        price = "₹999";
+        calculatedprice = "₹999";
       }
     }
   }
-  pricingField.value = price;
+  pricingField.value = calculatedprice;
 });
+document.getElementById("price").value = document.getElementById("price_display").value;
 
 const inputElement = document.querySelector('.error-message')
+document.getElementById("bookingForm").addEventListener("submit",  async function (e) {
+  e.preventDefault()
+  document.getElementById("price").value = document.getElementById("price_display").value;
+  let isValid = true;
+  function validateField(fieldId, errorMessageId, condition = true) {
 
-document.getElementById("bookingForm").addEventListener("submit", function (e) {
-  e.preventDefault();
- 
-    const agreeCheckbox = document.getElementById("agree");
-    if (!agreeCheckbox.checked) {
-      alert("You must agree to the terms and conditions.");
-      return;
+    const field = document.getElementById(fieldId);
+    const errorMessage = document.getElementById(errorMessageId);
+    if (!field.value.trim() || !condition) {
+      field.classList.add("error");
+      errorMessage.style.display = "inlie";
+      isValid = false;
+    } else {
+      field.classList.remove("error-message");
+      errorMessage.style.display = "none";
     }
-
-    const objData = {
-      Name: userName.value,
-      "phone no.": contact.value,
-      "city" : city.value,
-      "Address": address.value,
-      "booking-date": bookDate.value,
-      "time-Slot": timeSlot,
-      "package": package,
-      "car-variant": carType,
-      "price": pricingField.value,
-    };
-    console.log(objData);
-
-    Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "info@swassh.com",
-      Password: "C06A4D05C0482E104B7CBE675524346DCA4B",
-      To: "info@swassh.com",
-      From: "info@swassh.com",
-      Subject: "This is the subject",
-      Body: objData,
-    }).then((message) => {
-      // Show the modal
-      console.log(message)
-    });
-
-    const modal = document.getElementById("thankYouModal");
-      const span = document.getElementsByClassName("close")[0];
-      
-      modal.style.display = "block";
-
-      // Close the modal when the user clicks on <span> (x)
-      span.onclick = function() {
-        modal.style.display = "none";
-      }
-
-      // Close the modal when the user clicks anywhere outside of the modal
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-    this.reset()
   }
-);
+  validateField("name", "nameError");
+  validateField("phone", "phoneError", /^\d{10}$/.test(document.getElementById("phone").value));
+  validateField("address", "addressError");
+  validateField("city", "cityError");
+  validateField("bookingDate", "bookingDateError");
+  if (!validateCheckBoxes()) {
+    return;
+  }
+
+  if(isValid){
+    const formData = new FormData(e.target);
+
+      try {
+        const response =  await fetch(`https://script.google.com/macros/s/AKfycbyb1MljZBoHGvnLjTpIXBfUWaf2ezAR-bSjunc1yrA_dncLGhO_lMbYdCQHvDB4hiqg/exec`, {
+          method: "POST",
+          body: formData,
+        });
+    
+        if (response.ok) {
+          const result = await response.text();
+          alert(result); // Show a success message
+          window.location.href = "https://swassh.com/"; // Redirect to another page
+        } else {
+          alert("Form submission failed. Please try again.");
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+        alert("An error occurred. Please try again.");
+      }
+  }
+})
+
+

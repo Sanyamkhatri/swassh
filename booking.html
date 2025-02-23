@@ -43,7 +43,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
 	
 	<!-- All PLUGINS CSS ============================================= -->
-	<link rel="stylesheet" href="vendor/bootstrap-select/bootstrap-select.min.css">
+	<!-- <link rel="stylesheet" href="vendor/bootstrap-select/bootstrap-select.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	
 </head>
@@ -98,37 +98,40 @@
       <div class="input-group_booking">
           <div class="input-field_booking">
               <label for="name">Name</label>
-              <input class="input_booking_text" type="text" id="name" name="name" placeholder="Enter your name" required>
+              <input class="input_booking_text" type="text" id="name" name="name" placeholder="Enter your name" >
               <span class="error-message" id="nameError">Name is required.</span>
           </div>
           <div class="input-field_booking">
               <label for="phone">Phone No.</label>
-              <input class="input_booking_text" type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}">
+              <!-- <input class="input_booking_text" type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}"> -->
+              <input class="input_booking_text" type="tel" id="phone" name="phone" >
               <span class="error-message" id="phoneError">Phone number is required.</span>
               <span class="error-message1" id="phoneError">Phone number must be Exactly 10 Digits.</span>
+              
           </div>
       </div>
 
       <div class="input-field_booking">
           <label for="city">City</label>
-          <select class="input_booking_text" id="city" name="city" required>
+          <select class="input_booking_text" id="city" name="city" >
               <option value="" disabled selected>Select your city</option>
               <option value="Jaipur">Jaipur</option>
               <option value="Kota">Kota</option>
               <option value="Indore">Indore</option>
+              <option value="Indore">Ahmedabad</option>
           </select>
           <span class="error-message" id="cityError">City is required.</span>
       </div>
 
       <div class="input-field_booking">
           <label for="address">Address</label>
-          <textarea class="input_booking_text textarea" id="address" name="address" placeholder="Enter your address" required></textarea>
+          <textarea class="input_booking_text textarea" id="address" name="address" placeholder="Enter your address" ></textarea>
           <span class="error-message" id="addressError">Address is required.</span>
       </div>
       
       <div class="input-field_booking">
           <label for="bookingDate">Booking Date</label>
-          <input class="input_booking_text" type="date" id="bookingDate" name="bookingDate" required>
+          <input class="input_booking_text" type="date" id="bookingDate" name="bookingDate" >
           <span class="error-message" id="bookingDateError">Booking date is required.</span>
       </div>
       
@@ -213,11 +216,12 @@
       <div class="input-field_booking custom_margin-price_booking">
           <label for="price">Price</label>
           <input class="input_booking_text" type="text" id="price_display" placeholder="Price" disabled>
+          <input type="hidden" id="price" name="price" >
       </div>
 
       <div class="terms_booking">
           <label>
-              <input type="checkbox" id="agree" name="agree" required>
+              <input type="checkbox" id="agree" name="agree" >
               I Agree to the <a href="./termsconditions.html" target="_blank">Terms and Conditions as set out by the user agreement.</a>
           </label>
           <span class="error-message" id="agreeError">Required Field</span>
@@ -225,7 +229,7 @@
 
       <div class="terms_booking">
           <label>
-              <input type="checkbox" id="agree2" name="agree2" required>
+              <input type="checkbox" id="agree2" name="agree2" >
               Water & Electricity Available 
           </label>
           <span class="error-message" id="agree2Error">Required Field</span>
@@ -386,6 +390,6 @@
   
   
   </script>
-  <script src="./js/booking.js"></script>
+  <script src="booking.js"></script>
 </body>
 </html>
